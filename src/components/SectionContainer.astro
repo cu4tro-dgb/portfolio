@@ -1,0 +1,15 @@
+---
+interface Props {
+  name: string
+}
+
+const { name } = Astro.props
+---
+
+<section class="max-w-screen-lg mx-auto flex flex-col justify-center mb-10">
+  <h2 class="text-3xl font-bold -tracking-wider flex items-center gap-x-3 mb-6">
+    <slot name="icon" />
+    {name}
+  </h2>
+  <slot />
+</section>

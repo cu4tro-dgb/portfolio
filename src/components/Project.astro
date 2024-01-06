@@ -1,0 +1,74 @@
+---
+import SectionContainer from './SectionContainer.astro'
+import ProjectIcon from './icons/Project.astro'
+import { projects } from '../data/Project.ts'
+---
+
+<SectionContainer name="Proyectos">
+  <ProjectIcon slot="icon" />
+  <div class="card ml-3 grid grid-cols-3 gap-4">
+    {
+      projects.map(({ id, title, description, link, image, tecnologies }) => {
+        return (
+          <div class="card-body relative rounded-xl overflow-hidden border p-4 border-cyan-400/20">
+            <div>
+              <img class="rounded-xl" src={image} alt="ads" />
+            </div>
+            <div class=" bg-slate-300/10 p-4">
+              <h3 class="font-bold -tracking-wider text-lg flex justify-between">
+                {`${id}. ${title}`}
+                {link && <a href={link}>Link</a>}
+              </h3>
+
+              <p>{description}</p>
+              <ul class="flex gap-2 flex-row mb-2 flex-wrap">
+                {tecnologies.map((tecnology) => {
+                  return (<li>
+                    <span class={`flex gap-x-2 rounded-full text-xs py-1 px-2 border border-white/10 ${tecnology.class}`}>
+                      <span set:html={tecnology.icon} />{tecnology.name}
+                    </span>
+                  </li>)
+                })}
+              </ul>
+            </div>
+          </div>
+        )
+      })
+    }
+  </div>
+</SectionContainer>
+
+<style>
+  .card-body:nth-child(1n) {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+  .card-body:nth-child(2n) {
+    grid-row: span 2;
+    grid-column: span 1;
+  }
+  .card-body:nth-child(3n) {
+    grid-row: span 1;
+    grid-column: span 3;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .card {
+    container-type: inline-size;
+  }
+  @container (max-width: 768px) {
+    .card-body:nth-child(1n) {
+      grid-row: span 1;
+      grid-column: span 3;
+    }
+    .card-body:nth-child(2n) {
+      grid-row: span 1;
+      grid-column: span 3;
+    }
+    .card-body:nth-child(3n) {
+      grid-row: span 1;
+      grid-column: span 3;
+      display: block;
+    }
+  }
+</style>
