@@ -1,19 +1,39 @@
 ---
 import Github from './icons/Github.astro'
-import Instagram from './icons/Instagram.astro'
+import Email from './icons/Email.astro'
 import Linkedin from './icons/Linkedin.astro'
 import Dark from './icons/Dark.astro'
 ---
 
-<header class="fixed w-full mt-4 z-50 mix-blend-difference backdrop-blur-sm px-2">
-  <div class="relative flex container mx-auto justify-between border rounded-full py-2 px-4 bg-slate-400/10 ">
+<header class="fixed w-full mt-4 z-50 px-2">
+  <div
+    class="relative flex container mx-auto justify-between border rounded-full py-2 px-4 bg-slate-400/10"
+  >
     <div class="flex gap-x-3">
-      <Github class="size-6 text-white " />
-      <Linkedin class="size-6 text-white" />
-      <Instagram class="size-6 text-white" />
+      <a href="https://github.com/cu4tro-dgb" target="_blank" rel="nooppener">
+        <Github class="size-6 text-white" /></a
+      >
+      <a
+        href="https://www.linkedin.com/in/pauutorres/"
+        target="_blank"
+        rel="nooppener"
+      >
+        <Linkedin class="size-6 text-white" /></a
+      >
+      <a href="mailto:pauultoorres@gmail.com"
+        ><Email class="size-6 text-white" /></a
+      >
     </div>
     <div>
       <Dark class="size-6 text-white" />
     </div>
   </div>
 </header>
+
+<style>
+  header {
+    backdrop-filter: blur(4px);
+    mix-blend-mode: difference;
+    -webkit-backdrop-filter: none;
+  }
+</style>
