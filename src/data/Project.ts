@@ -40,7 +40,7 @@ export const projects: ProjectsType[] = [
     ]
   },
   {
-    id: 3,
+    id: 2,
     title: 'Solver',
     description:
       'Diseñado para simplificar y agilizar el proceso de registro, esta aplicación permite a los usuarios ingresar y monitorear sus compras de manera centralizada.',
@@ -59,7 +59,7 @@ export const projects: ProjectsType[] = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     title: 'Make Your Burger',
     description:
       'Una innovadora plataforma "Make Your Burger" que permite a los usuarios personalizar su hamburguesa perfecta. A través de una interfaz interactiva y amigable, los visitantes pueden seleccionar ingredientes, ajustar porciones y explorar una amplia variedad de opciones. La plataforma no solo brinda libertad creativa en la construcción de la hamburguesa ideal, sino que también realiza cálculos en tiempo real para mostrar el costo, las calorías y otros detalles relevantes. para la toma de notas, demostrando mi habilidad en el diseño y desarrollo web.',
@@ -103,7 +103,7 @@ export const projects: ProjectsType[] = [
     ]
   },
   {
-    id: 4,
+    id: 5,
     title: 'Rickflixx',
     description:
       'Desarrollé una emocionante interfaz para explorar el fascinante mundo de Rick and Morty, disponible en Netflix, aprovechando su API. Mi aplicación ofrece a los usuarios una experiencia completa al proporcionar información detallada sobre cada temporada y episodio de la serie.',
